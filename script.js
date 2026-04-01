@@ -1,16 +1,21 @@
-const showlevanSections = () => {
+const hideAllSections = () => {
+    const allSections = document.querySelectorAll('section')
+    allSections.forEach(section => section.style.display = 'none')
+}
+
+const showlevantSections = () => {
     const content = document.querySelector('.content');
     content.style.display = 'block'
 }
 
 const showSection = (className) => {
     hideAllSections();
-    showlevanSections();
+    showlevantSections();
 
-    cont section = document.querySelector(className);
-    section.style.display = "";
+    const section = document.querySelector(className);
+    section.style.display = ''
 }
 
-window.addEventListener('DOMContentLoaded', (e) =>{
+window.addEventListener('DOMContentLoaded', (_e) =>{
     showSection('full-bleed')
 });
